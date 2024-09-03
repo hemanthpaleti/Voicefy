@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-repeat: no-repeat; 
+            background-image: url('feedback2.avif'); 
+            background-size: cover; 
+            background-attachment: fixed;
+            
+        } 
+
+        .top-bar {
+        width: 100%;
+        height: 90px; 
+        background-color: #0074d9; 
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); 
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1; 
+        } 
+
+        .top-bar h1{ 
+            margin-left: 20px; 
+            font-family: 'Century' 'Gothic' ;
+        }
+
+
+        .container {
+            width: 400px;
+            background: #5DADE2  ;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            margin-top: 400px; 
+            margin-bottom: 0px;        
+        }
+
+        .box {
+            margin-top: 20px;
+        }
+
+        .box label {
+            font-weight: bold;
+        }
+
+        .box input[type="text"], .box textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .box textarea {
+            resize: vertical;
+        }
+
+        .box button {
+            background-color: #0074d9;
+            color: white; 
+            padding: 30px 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .box button:hover {
+            background-color: #0056b3;
+        } 
+        
+    </style>
+</head>
+<body> 
+    
+    <div class="top-bar">
+        <h1>Raise Your Issue</h1>
+    </div>
+    <div class="container">
+        
+        <h2>Enter Student Details</h2>
+        <div class="box">
+            <form id="myForm" action="problemsub" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Student Name"> 
+
+                <label for="regno">Registration Number:</label>
+                <input type="text" id="Reg" name="regno" placeholder="Student Reg">
+
+                <label for="year">Year:</label>
+                <input type="text" id="age" name="year" placeholder="Student Year"> 
+
+                <label for="branch">Branch:</label>
+                <select name="branch">
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="AIML">AIML</option>
+                    <option value="AIDS">AIDS</option>
+                    <option value="CSE">CSE</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="MECH">MECH</option>
+                    <option value="IT">IT</option>
+                    <option value="EEE">EEE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CSBS">CSBS</option>
+                </select>
+
+        <input type="hidden" name="email" value="<%= email %>">
+
+        <h2>College Problem</h2>
+        <div class="box">
+            <label for="problem">Describe the problem:</label>
+            <textarea id="problem" name="problem" rows="10" placeholder="Enter the problem"></textarea>
+        </div>
+        
+        <button type="submit">Submit</button> 
+        </form>
+        </div>
+    </div> 
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #FFB914;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #main-container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 450px; 
+        }
+
+        #inner-container, #login-form {
+            width: 50%; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } 
+
+
+        #logo {
+            width: 318px;
+            height: 600px; 
+            margin-right: 5px;
+            background-image: url('signin.jpg'); 
+            background-size: cover;
+        }
+
+        #heading {
+            font-size: 45px;
+            margin-top: 1px; 
+            font-weight: bolder;
+
+        }
+
+        #email, #password, #submit, #name, #password1{
+            width: 100%;
+            padding: 10px;
+            margin: 1px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #submit {
+            background-color: #AF6900;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color:#FFE13C;
+        } 
+
+        #form{ 
+            margin-top: 25px; 
+            padding:30px;
+        } 
+
+        #form{ 
+            margin: 1px;
+        } 
+
+        #form input{ 
+            display: block; 
+            margin-bottom: 8px; 
+            border-radius: 10px; 
+            border: 2px solid; 
+        } 
+        #submit{ 
+            margin-top: 20px;
+            border-radius: 10px; 
+            border: 2px solid; 
+            color: black;
+        } 
+
+        #form p{ 
+            margin-top: 25px; 
+            font-size: 19px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="inner-container">
+            <div id="logo"></div>
+        </div>
+        <div id="login-form">
+            <div id="heading">Register Here</div>
+            <div id="form">
+              <form action="/signupsubmit" method="post">
+                <input type="text" id="name" placeholder="Name" name="name"><br>
+                <input type="text" id="email" placeholder="Email" name="email"><br>
+                <input type="password" id="password" placeholder="Password" name="password"> <br>
+                <input type="password" id="password1" placeholder="Confirm Password">
+                <button id="submit" type="submit">Create an account</button> 
+                <span>Already have account?<a class="link" href="/login">Login</a></span>
+              </form>
+            </div>
+        </div>
+    </div> 
+    <% if (alertMessage) { %>
+        <script>
+          alert('<%- alertMessage %>');
+        </script>
+    <% } %>
+    
+</body>
+
+</html>

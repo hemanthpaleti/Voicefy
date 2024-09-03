@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('college-background.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            height: 100px;
+            width: 100%;
+            background-color: #7AF0C5  ;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .header h1 {
+            color: black;
+            font-size: 40px;
+        }
+
+        .college-logo {
+            width: 90px;
+            height: 90px;
+            background-image: url('college logo.jpg'); 
+            background-size: cover; 
+            margin-right: 70px;
+        }
+
+        .college-name {
+            color: #fff;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%; 
+            height: 10%;
+            margin-top: 50px; 
+        }
+
+        .card {
+            background: #34AA7F;
+            box-shadow: 10px 10px 10px rgb(9, 9, 9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            text-align: center; 
+            height: 180px; 
+            display:flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .icon {
+            width: 200px;
+            height: 200px;
+            background-image: url('studenticon.png'); 
+            background-size: cover;
+            margin: 0 auto 10px;
+        }
+
+        .faculty-icon {
+            width: 200px;
+            height: 200px;
+            background-image: url('teachericon.png'); 
+            background-size: cover;
+            margin: 0 auto 10px;
+        }
+
+        .link {
+            font-size: 18px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            color: #111111;
+            text-align: center; 
+            margin-top: 30px;
+        } 
+
+        h2,h3 {
+            margin: 5px; 
+            padding: 0; 
+        }  
+         
+        .name{ 
+            margin-top: 5px;
+        }        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Voicefy</h1>
+        <div class="college-logo"></div>
+    </div>  
+    <h2>Vishnu Institute of Technology</h2> 
+    <h3>Bhimavarm</h3>
+    
+    <div class="container">
+        <div class="card">
+            <div class="icon"></div>
+            <div class="name">
+            <a class="link" href="/signup">Student</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="faculty-icon"></div>
+            <a class="link" href="/faclogin">Faculty</a>
+        </div>
+    </div>
+
+    <p class="quote">"I recognize that this problem is complex, but I believe that by working together, we can find a solution."</p>
+
+</body>
+</html>

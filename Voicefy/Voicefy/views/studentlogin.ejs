@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #0AFF5F;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #main-container {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 400px; 
+        }
+
+        #inner-container, #login-form {
+            width: 50%; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } 
+
+
+        #logo {
+            width: 300px;
+            height: 500px;
+            background-image: url('login.jpg'); 
+            background-size: cover;
+        }
+
+        #heading {
+            font-size: 50px;
+            margin-top: 30px; 
+            font-weight: bolder;
+
+        }
+
+        #email, #password, #submit {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #submit {
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: #0AFF5F;
+        } 
+
+        #form{ 
+            margin-top: 25px; 
+            padding:30px;
+        } 
+
+        #form{ 
+            margin: 20px;
+        } 
+
+        #form input{ 
+            display: block; 
+            margin-bottom: 10px; 
+            border-radius: 10px; 
+            border: 2px solid; 
+        } 
+        #submit{ 
+            margin-top: 20px;
+            border-radius: 10px; 
+            border: 2px solid; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="inner-container">
+            <div id="logo"></div>
+        </div>
+        <div id="login-form">
+            <div id="heading">Welcome</div>
+            <div id="form">
+            <form action="/loginsubmit" method="post">
+            <input type="text" id="email" placeholder="Email" name="email"><br>
+            <input type="password" id="password" placeholder="Password" name="password">
+             <button id="submit" type="submit">Login</button>
+            </form>
+            </div>
+        </div>
+    </div> 
+    
+    <% if(alertMessage) { %>
+        <script>
+            alert('<%= alertMessage %>')
+        </script>
+    <% } %>
+</body>
+
+</html>
